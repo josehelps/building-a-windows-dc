@@ -1,0 +1,10 @@
+- hosts: dc
+  gather_facts: True
+  roles:
+    - common
+    - windows_dns_server
+    - windows_domain_controller
+    - universal_forwarder
+    - sysmon
+  vars_files:
+    - ../vars/vars.yml 
